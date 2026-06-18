@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TangibleAI Learning | Screen-Limited AI for Children</title>
+  <style>
+    :root {
+      --bg: #f8f4ec;
+      --paper: #fffdf8;
+      --text: #24312b;
+      --muted: #657268;
+      --accent: #8c6f45;
+      --accent2: #8aa37b;
+      --line: #e5dccd;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      padding: 24px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,253,248,0.8);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(8px);
+    }
+    .logo { font-weight: bold; font-size: 22px; color: var(--accent); }
+    nav a { margin-left: 22px; color: var(--text); text-decoration: none; font-size: 15px; }
+    .hero {
+      padding: 90px 8% 70px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .eyebrow { color: var(--accent2); text-transform: uppercase; letter-spacing: 2px; font-size: 13px; font-weight: bold; }
+    h1 { font-size: 58px; line-height: 1.05; margin: 12px 0 20px; }
+    h2 { font-size: 36px; line-height: 1.2; margin: 0 0 18px; }
+    h3 { margin-bottom: 8px; }
+    p { font-size: 18px; color: var(--muted); }
+    .buttons { margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid var(--accent);
+    }
+    .btn.primary { background: var(--accent); color: white; }
+    .btn.secondary { color: var(--accent); }
+    .hero-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 20px 50px rgba(68,54,34,0.08);
+    }
+    .activity-box {
+      background: #f1eadf;
+      border-radius: 22px;
+      padding: 22px;
+      margin-top: 18px;
+    }
+    section { padding: 70px 8%; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 26px;
+    }
+    .wide { grid-column: span 2; }
+    .steps { counter-reset: step; }
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      background: var(--accent2);
+      color: white;
+      width: 34px;
+      height: 34px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+    .cta {
+      background: var(--text);
+      color: white;
+      text-align: center;
+      border-radius: 36px;
+      margin: 50px 8%;
+      padding: 60px 8%;
+    }
+    .cta p { color: #d8ded8; }
+    footer { padding: 30px 8%; color: var(--muted); border-top: 1px solid var(--line); }
+    @media (max-width: 820px) {
+      header { flex-direction: column; gap: 12px; }
+      nav a { margin: 0 8px; }
+      .hero { grid-template-columns: 1fr; padding-top: 60px; }
+      h1 { font-size: 42px; }
+      .grid { grid-template-columns: 1fr; }
+      .wide { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">TangibleAI Learning</div>
+    <nav>
+      <a href="#problem">Problem</a>
+      <a href="#solution">Solution</a>
+      <a href="#how">How it works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Screen-limited AI for children</div>
+        <h1>AI that brings learning off the screen and into the real world.</h1>
+        <p>TangibleAI Learning helps parents and teachers create hands-on, age-appropriate activities using books, blocks, nature, movement, stories, and real-world materials.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#contact">Join the pilot</a>
+          <a class="btn secondary" href="#how">See how it works</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Example AI Activity</h3>
+        <p><strong>Year 1 Maths:</strong> Addition with wooden blocks</p>
+        <div class="activity-box">
+          <p>“Place 3 blocks on the mat. Now add 2 more. Count them aloud. Can you show 5 in another way?”</p>
+        </div>
+        <p>No child screen. Adult-guided. Hands-on learning.</p>
+      </div>
+    </section>
+
+    <section id="problem">
+      <div class="grid">
+        <div class="card wide">
+          <h2>The Problem</h2>
+          <p>Most AI learning tools today are built around more screen time, faster answers, and child-facing digital interfaces. For young children, this can reduce hands-on exploration, movement, focus, imagination, and adult-child interaction.</p>
+        </div>
+        <div class="card">
+          <h3>Children need more than answers.</h3>
+          <p>They need touch, rhythm, repetition, curiosity, storytelling, outdoor life, and meaningful thinking.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="solution">
+      <h2>Our Solution</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Adult-Controlled AI</h3>
+          <p>Parents and teachers choose the year, subject, topic, materials, and learning goal.</p>
+        </div>
+        <div class="card">
+          <h3>Screen-Free Activities</h3>
+          <p>AI creates activities using blocks, books, clay, LEGO, maps, leaves, shells, and movement.</p>
+        </div>
+        <div class="card">
+          <h3>Child-Safe Design</h3>
+          <p>No open chat for children. No addictive rewards. No random answers. No scrolling.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <h2>How It Works</h2>
+      <div class="grid steps">
+        <div class="card step">
+          <h3>Select Learning Goal</h3>
+          <p>Choose Year 1–8, subject, topic, duration, and available materials.</p>
+        </div>
+        <div class="card step">
+          <h3>Generate Activity</h3>
+          <p>AI creates a short, hands-on lesson with adult script and open-ended questions.</p>
+        </div>
+        <div class="card step">
+          <h3>Observe Progress</h3>
+          <p>The adult records focus, understanding, creativity, language, and next steps.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Designed for Year 1 Onwards</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Year 1–2</h3>
+          <p>Maths with blocks, phonics with story cards, nature walks, sorting, counting, drawing.</p>
+        </div>
+        <div class="card">
+          <h3>Year 3–5</h3>
+          <p>Science investigations, geography maps, measurement, patterns, journaling, building challenges.</p>
+        </div>
+        <div class="card">
+          <h3>Year 6–8</h3>
+          <p>Socratic questions, project-based learning, experiments, research prompts, ethical AI reflection.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta" id="contact">
+      <h2>Build the future of screen-wise learning.</h2>
+      <p>Join the pilot for parents, teachers, homeschoolers, and screen-conscious classrooms.</p>
+      <a class="btn primary" href="mailto:hello@tangibleai.learning">Contact Us</a>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 TangibleAI Learning. Screen-limited AI learning for children.
+  </footer>
+</body>
+</html>
